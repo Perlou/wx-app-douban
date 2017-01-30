@@ -31,5 +31,10 @@ Page({
                 })
             }
         })     
+    },
+
+    // 页面滚动到底部
+    scrolltolowerEventHandle () {
+        console.log('111')
     }
 })

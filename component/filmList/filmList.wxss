@@ -20,7 +20,7 @@
     position: relative;
 }
 
-.file-cover-image{
+.film-cover-image{
     width: 350rpx;
     height: 508rpx;
 }
@@ -42,6 +42,7 @@
 
 .film-title{
     padding: 16rpx;
+    font-size: 28rpx;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;

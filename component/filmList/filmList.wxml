@@ -2,21 +2,47 @@
    filmList 模版 
 -->
 <template name="filmList">
-<block wx:if="{{showLoading}}">
+<block wx:if="{{!showLoading}}">
     <scroll-view
         style="height: {{windowHeight}}rpx"
-        scroll-y="true">
+        scroll-y="true"
+        bindscrolltolower="scrolltolowerEventHandle">
         <view class="film-scroll-view">
+            <!-- film item -->
             <view 
-                class="filmItem">
+                class="filmItem" 
+                wx:for="{{films}}"
+                wx:for-index="filmIndex"
+                wx:for-item="filmItem"
+                wx:key="{{filmItem.id}}"
+                data-id="{{filmItem.id}}">
+                
+                <!-- film image -->
+                <image class="film-cover-image" src="{{filmItem.images.large}}"></image>
+                <!-- end film image -->
+                
+                <!-- film rating -->
                 <view class="film-rating">
-                    <block>11分</block>
+                    <block wx:if="{{filmItem.rating.average == 0}}">
+                        暂无评分
+                    </block>
+                    <block wx:else>
+                        {{filmItem.rating.average}}分
+                    </block>
                 </view>
+                <!-- end film rating -->
+
+                <!-- film title -->
+                <view class="film-title">
+                    {{filmItem.title}}
+                </view>
+                <!-- end film title -->
+
+                <!-- film tag -->
+
+                <!-- end film tag -->
             </view>
-            <view class="film-title">魔兽</view>
-            <view class="film-tag">
-                filmtag
-            </view>
+            <!-- end film item -->
         </view>
     </scroll-view>
 </block>
