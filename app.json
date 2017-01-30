@@ -1,11 +1,30 @@
 {
     "pages": [
-
+        "pages/popular/popular"
     ],
     "window": {
-
+        "navigationBarBackgroundColor": "#47a86c",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "电影推荐",
+        "backgroundColor": "#ffffff",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh": true
     },
     "tabBar": {
-        
+        "color": "#686868",
+        "selectedColor": "#47a86c",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/popular/popular",
+                "text": "热映"
+            },
+            {
+                "pagePath": "pages/popular/popular",
+                "text": "待映"
+            }
+        ],
+        "position": "bottom"
     }
 }

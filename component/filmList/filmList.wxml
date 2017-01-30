@@ -1,0 +1,23 @@
+<!--
+   filmList 模版 
+-->
+<template name="filmList">
+<block wx:if="{{showLoading}}">
+    <scroll-view
+        style="height: {{windowHeight}}rpx"
+        scroll-y="true">
+        <view class="film-scroll-view">
+            <view 
+                class="filmItem">
+                <view class="film-rating">
+                    <block>11分</block>
+                </view>
+            </view>
+            <view class="film-title">魔兽</view>
+            <view class="film-tag">
+                filmtag
+            </view>
+        </view>
+    </scroll-view>
+</block>
+</template>
