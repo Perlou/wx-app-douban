@@ -39,7 +39,16 @@
                 <!-- end film title -->
 
                 <!-- film tag -->
-
+                <view class="film-tag">
+                    <view 
+                        class="film-tag-item"
+                        wx:for="{{filmItem.genres}}"
+                        wx:for-item="filmTagItem"
+                        wx:key="genres"
+                        data-tag="{{filmTagItem}}">
+                        {{filmTagItem}}
+                    </view>
+                </view>
                 <!-- end film tag -->
             </view>
             <!-- end film item -->
