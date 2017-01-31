@@ -16,7 +16,6 @@ Page({
     },
 
     onLoad (options) {
-        console.log(options)
         let filmId = options.id
         this.setData({
             id: filmId

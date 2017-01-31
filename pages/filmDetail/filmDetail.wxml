@@ -1,3 +1,15 @@
-<view class="fd">
-    fd
-</view>
+<block wx-if="{{!showLoading && showContent}}">
+    <!-- detail head -->
+    <view class="film-detail-head">
+        <view 
+            class="film-detail-head-bg"
+            style="background-image: url({{filmDetail.images.large}});"
+        ></view>
+
+        <image
+            class="film-detail-cover"
+            src="{{filmDetail.images.large}}"
+        ></image>
+    </view>
+    <!-- end detail head -->
+</block>
