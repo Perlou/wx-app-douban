@@ -17,7 +17,11 @@ export default {
         } = this.data
 
         if (hasMore) {
-            // wx.showTo
+            wx.showToast({
+                title: '加载中...',
+                icon: 'loading',
+                duration: 10000
+            })
             // 发起请求
             wx.request({
                 url,
@@ -31,7 +35,6 @@ export default {
                     "Content-Type": "application/json,application/json"
                 },
                 success (res) {
-                    // console.log(res)
                     if (res.data.subjects.length === 0) {
                         _this.setData({
                             hasMore: false
@@ -43,6 +46,8 @@ export default {
                             showLoading: false
                         })
                     }
+                    wx.stopPullDownRefresh()
+                    typeof cb == 'function' && cb(res.data)
                 },
                 fail () {
                     _this.setData({
@@ -50,7 +55,7 @@ export default {
                     })
                 },
                 complete () {
-                    console.log('complete')
+                    wx.hideToast()
                 }
             })
         }

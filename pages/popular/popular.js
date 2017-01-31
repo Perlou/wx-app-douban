@@ -33,8 +33,8 @@ Page({
         })     
     },
 
-    // 页面滚动到底部
+    // 页面滚动到底部，加载更多
     scrolltolowerEventHandle () {
-        console.log('111')
+        fetch.getFilms.call(this, url)
     }
 })

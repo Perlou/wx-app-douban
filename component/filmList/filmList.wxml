@@ -52,6 +52,18 @@
                 <!-- end film tag -->
             </view>
             <!-- end film item -->
+
+            <!-- loading -->
+            <block wx:if="{{hasMore}}">
+                <view class="loading-tip">加载中...</view>
+            </block>
+            <block wx:else>
+                <view class="loading-tip">
+                    没有更多内容了
+                </view>
+            </block>
+            <!-- end loading -->
+
         </view>
     </scroll-view>
 </block>
