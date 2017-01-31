@@ -15,7 +15,8 @@
                 wx:for-index="filmIndex"
                 wx:for-item="filmItem"
                 wx:key="{{filmItem.id}}"
-                data-id="{{filmItem.id}}">
+                data-id="{{filmItem.id}}"
+                catchtap="toFilmDetail">
                 
                 <!-- film image -->
                 <image class="film-cover-image" src="{{filmItem.images.large}}"></image>

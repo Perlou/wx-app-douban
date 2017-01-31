@@ -1,6 +1,7 @@
 {
     "pages": [
-        "pages/popular/popular"
+        "pages/popular/popular",
+        "pages/coming/coming"
     ],
     "window": {
         "navigationBarBackgroundColor": "#47a86c",
@@ -23,7 +24,7 @@
                 "text": "热映"
             },
             {
-                "pagePath": "pages/popular/popular",
+                "pagePath": "pages/coming/coming",
                 "iconPath": "static/images/coming_icon.png",
                 "selectedIconPath": "static/images/coming_active_icon.png",
                 "text": "待映"

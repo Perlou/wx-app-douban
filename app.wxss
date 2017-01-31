@@ -4,3 +4,20 @@ page {
     font-family: '微软雅黑';
     font-size: 28rpx;
 }
+
+.loading{
+    width: 200rpx;
+    height: 200rpx;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    margin-top: -100rpx;
+    margin-left: -100rpx;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 16rpx;
+    color: #ffffff;
+    text-align: center;
+    font-size: 24rpx;
+    animation: fadeIn 0.6s;
+}
