@@ -18,11 +18,27 @@
         "list": [
             {
                 "pagePath": "pages/popular/popular",
+                "iconPath": "static/images/popular_icon.png",
+                "selectedIconPath": "static/images/popular_active_icon.png",
                 "text": "热映"
             },
             {
                 "pagePath": "pages/popular/popular",
+                "iconPath": "static/images/coming_icon.png",
+                "selectedIconPath": "static/images/coming_active_icon.png",
                 "text": "待映"
+            },
+            {
+                "pagePath": "pages/popular/popular",
+                "iconPath": "static/images/search_icon.png",
+                "selectedIconPath": "static/images/search_active_icon.png",
+                "text": "搜索"
+            },
+            {
+                "pagePath": "pages/popular/popular",
+                "iconPath": "static/images/top_icon.png",
+                "selectedIconPath": "static/images/top_active_icon.png",
+                "text": "排行"
             }
         ],
         "position": "bottom"
