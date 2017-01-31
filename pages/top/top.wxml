@@ -1,0 +1,2 @@
+<import src="../../component/filmList/filmList.wxml"/>
+<template is="filmList" data="{{films: films, showLoading: showLoading, hasMore: hasMore, start: start, windowHeight: windowHeight}}"/>

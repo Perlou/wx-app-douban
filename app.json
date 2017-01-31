@@ -1,7 +1,8 @@
 {
     "pages": [
         "pages/popular/popular",
-        "pages/coming/coming"
+        "pages/coming/coming",
+        "pages/top/top"
     ],
     "window": {
         "navigationBarBackgroundColor": "#47a86c",
@@ -36,7 +37,7 @@
                 "text": "搜索"
             },
             {
-                "pagePath": "pages/popular/popular",
+                "pagePath": "pages/top/top",
                 "iconPath": "static/images/top_icon.png",
                 "selectedIconPath": "static/images/top_active_icon.png",
                 "text": "排行"
