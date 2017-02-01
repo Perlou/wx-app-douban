@@ -21,5 +21,19 @@ Page({
             id: filmId
         })
         fetch.getFilmDetail.call(this, url, filmId)
+    },
+
+    onPullDownRefresh () {
+        this.onLoad({
+            id: this.data.id
+        })
+    },
+
+    // 跳转至人物详情页
+    toPersonDetail (event) {
+        let personId = event.currentTarget.dataset.id
+        wx.redirectTo({
+            url: `../personDetail/personDetail?id=${personId}`
+        })
     }
 })

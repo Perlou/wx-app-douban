@@ -3,7 +3,8 @@
         "pages/popular/popular",
         "pages/coming/coming",
         "pages/top/top",
-        "pages/filmDetail/filmDetail"
+        "pages/filmDetail/filmDetail",
+        "pages/personDetail/personDetail"
     ],
     "window": {
         "navigationBarBackgroundColor": "#47a86c",

@@ -87,7 +87,8 @@
         <view class="film-detail-bd-person">
             <view 
                 class="film-detail-bd-person-item"
-                data-id="{{filmDetail.director[0].id}}">
+                data-id="{{filmDetail.director[0].id}}"
+                bindtap="toPersonDetail">
                 
                 <image 
                     class="film-detail-bd-person-avatar"
@@ -110,7 +111,8 @@
                 wx:key="{{filmDetailCastItem.id}}">
                 <view 
                     class="film-detail-bd-person-item"
-                    data-id="{{filmDetailCastItem.id}}">
+                    data-id="{{filmDetailCastItem.id}}"
+                    bindtap="toPersonDetail">
 
                     <image 
                         class="film-detail-bd-person-avatar"
