@@ -99,5 +99,43 @@ export default {
                 wx.hideToast()
             }
         })
+    },
+
+    // 获取人物详情
+    getPersonDetail (url, id, cb) {
+        const _this = this
+        wx.showToast({
+            title: '加载中',
+            icon: 'loading',
+            duration: 10000
+        })
+        wx.request({
+            url: url + id,
+            method: 'GET',
+            header: {
+                'Content-Type': 'application/json,application/json'
+            },
+            success (res) {
+                _this.setData({
+                    person: res.data,
+                    showLoading: false,
+                    showContent: true
+                })
+
+                wx.setNavigationBarTitle({
+                    title: res.data.title
+                })
+                wx.stopPullDownRefresh()
+                typeof cb == 'function' && cb(res.data)
+            },
+            fail () {
+                _this.setData({
+                    showLoading: false
+                })
+            },
+            complete () {
+                wx.hideToast()
+            }
+        })
     }
 }

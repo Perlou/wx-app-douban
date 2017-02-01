@@ -9,9 +9,27 @@
             <view class="person-detail-avatar">
                 
             </view>
-            <view class="person-detail-name-cn"></view>
+            <view class="person-detail-name-cn">{{person.name}}</view>
+            <view class="person-detail-name-en">{{person.name_en}}</view>
+            <view class="person-detail-address">{{person.born_place}}</view>
         </view>
-
     </view>
     <!-- end person detail -->
+
+    <view class="person-detail-title">
+        主要作品
+    </view>
+
+    <!-- person bd -->
+    <view class="person-detail-bd">
+        <view class="person-detail-work">
+            <block>
+                <view class="person-detail-work-item">
+                    
+                </view>
+            </block>
+        </view>
+    </view>
+    <!-- end person bd -->
+
 </block>

@@ -12,5 +12,13 @@ Page({
         person: {},
         showLoading: true,
         showContent: false
+    },
+
+    onLoad (options) {
+        let personId = options.id
+        this.setData({
+            id: personId
+        })
+        fetch.getPersonDetail.call(this, url, personId)
     }
 })
