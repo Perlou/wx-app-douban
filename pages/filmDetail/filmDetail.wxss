@@ -59,3 +59,31 @@
     color: #eee;
     line-height: 40rpx;
 }
+
+.film-detail-data {
+    display: flex;
+    height: 150rpx;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #F4F4F4;
+}
+
+.film-detail-data .data-item {
+    width: 33.33%;
+    text-align: center;
+    border-left: 1px solid #EEEEEE;
+}
+
+.film-detail-data .data-item:first-child {
+    border-left: none;
+}
+
+.film-detail-data .data-num {
+    font-size: 40rpx;
+    font-weight: 100;
+    color: #444444;
+}
+
+.film-detail-data .data-title {
+    color: #999999;
+}

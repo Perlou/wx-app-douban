@@ -14,9 +14,11 @@
         <!-- detail intro -->
         <view class="film-detail-intro">
             <view class="film-detail-title">{{filmDetail.title}}</view>
+
             <view class="film-detail-intro-text">
                 导演: {{filmDetail.director[0].name}}
             </view>
+
             <view class="film-detail-intro-text">
                 演员:
                 <block
@@ -28,6 +30,7 @@
                     <block wx:if="{{filmDetailCastIndex !== filmDetail.casts.length - 1}}">/</block>
                 </block>
             </view>
+
             <view class="film-detail-intro-text">
                 豆瓣评分:
                 <block wx:if="{{filmDetail.rating.average == 0}}">
@@ -37,8 +40,42 @@
                     {{filmDetail.rating.average}}分
                 </block>
             </view>
+            
+            <view class="film-detail-intro-text">
+                上映年份: {{filmDetail.year}}年
+            </view>
         </view>
         <!-- end detail intro -->
     </view>
     <!-- end detail head -->
+
+    <!-- detail data -->
+    <view class="film-detail-data">
+        <view class="data-item">
+            <view class="data-num">
+                {{filmDetail.collect_count}}
+            </view>
+            <view class="data-title">
+                看过
+            </view>
+        </view>
+        <view class="data-item">
+            <view class="data-num">
+                {{filmDetail.wish_count}}
+            </view>
+            <view class="data-title">
+                想看
+            </view>
+        </view>
+        <view class="data-item">
+            <view class="data-num">
+                {{filmDetail.ratings_count}}
+            </view>
+            <view class="data-title">
+                评分人数
+            </view>
+        </view>
+    </view>
+    <!-- end detail data -->
+
 </block>
