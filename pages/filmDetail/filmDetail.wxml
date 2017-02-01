@@ -10,6 +10,35 @@
             class="film-detail-cover"
             src="{{filmDetail.images.large}}"
         ></image>
+
+        <!-- detail intro -->
+        <view class="film-detail-intro">
+            <view class="film-detail-title">{{filmDetail.title}}</view>
+            <view class="film-detail-intro-text">
+                导演: {{filmDetail.director[0].name}}
+            </view>
+            <view class="film-detail-intro-text">
+                演员:
+                <block
+                    wx:for="{{filmDetail.casts}}"
+                    wx:for-item="filmDetailCastItem"
+                    wx:for-index="filmDetailCastIndex"
+                    wx:key="filmDetailCastItem">
+                    {{filmDetailCastItem.name}}
+                    <block wx:if="{{filmDetailCastIndex !== filmDetail.casts.length - 1}}">/</block>
+                </block>
+            </view>
+            <view class="film-detail-intro-text">
+                豆瓣评分:
+                <block wx:if="{{filmDetail.rating.average == 0}}">
+                    暂无评分
+                </block>
+                <block wx:else>
+                    {{filmDetail.rating.average}}分
+                </block>
+            </view>
+        </view>
+        <!-- end detail intro -->
     </view>
     <!-- end detail head -->
 </block>

@@ -31,3 +31,31 @@
     background-position: center;
     filter: blur(30rpx);
 }
+
+.film-detail-cover {
+    width: 300rpx;
+    height: 420rpx;
+    margin-top: 80rpx;
+    z-index: 999;
+    border-radius: 8rpx;
+    box-shadow: 0 30rpx 150rpx rgba(255, 255, 255, 0.3);
+}
+
+.film-detail-intro {
+    width: 320rpx;
+    margin-top: 80rpx;
+    margin-left: 40rpx;
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+.film-detail-title {
+    margin-bottom: 30rpx;
+    font-size: 42rpx;
+}
+
+.film-detail-intro-text {
+    margin-bottom: 18rpx;
+    color: #eee;
+    line-height: 40rpx;
+}
