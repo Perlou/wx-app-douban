@@ -78,4 +78,73 @@
     </view>
     <!-- end detail data -->
 
+    <!-- detail bd -->
+    <view class="film-detail-bd">
+        <view class="film-detail-bd-title">剧情简介</view>
+        <view class="film-detail-bd-intro">{{filmDetail.summary}}</view>
+        <view class="film-detail-bd-title">导演/演员</view>
+
+        <view class="film-detail-bd-person">
+            <view 
+                class="film-detail-bd-person-item"
+                data-id="{{filmDetail.director[0].id}}">
+                
+                <image 
+                    class="film-detail-bd-person-avatar"
+                    src="{{!filmDetail.directors[0].avatars ? '' : filmDetail.directors[0].avatars.medium}}"
+                ></image>
+
+                <view class="film-detail-bd-person-name">
+                    {{filmDetail.directors[0].name}}
+                </view>
+
+                <view class="film-detail-bd-person-role">
+                    导演
+                </view>
+
+            </view>
+
+            <block
+                wx:for="{{filmDetail.casts}}"
+                wx:for-item="filmDetailCastItem"
+                wx:key="{{filmDetailCastItem.id}}">
+                <view 
+                    class="film-detail-bd-person-item"
+                    data-id="{{filmDetailCastItem.id}}">
+
+                    <image 
+                        class="film-detail-bd-person-avatar"
+                        src="{{!filmDetailCastItem.avatars? '' : filmDetailCastItem.avatars.medium}}"
+                    ></image>
+
+                    <view class="film-detail-bd-person-name">
+                        {{filmDetailCastItem.name}}
+                    </view>
+
+                    <view class="film-detail-bd-person-role">
+                        演员
+                    </view>    
+
+                </view>  
+            </block>
+
+        </view>
+
+        <view class="film-detail-bd-title">标签</view>
+        <view class="film-detail-bd-tag">
+            <block
+                wx:for="{{filmDetail.genres}}"
+                wx:for-item="filmDetailTagItem"
+                wx:key="filmDetailTagItem">
+
+                <view 
+                    class="film-detail-bd-tag-item" 
+                    data-tag="{{filmDetailTagItem}}">
+                    {{filmDetailTagItem}}
+                </view>
+
+            </block>
+        </view>
+    </view>
+    <!-- end detail bd -->
 </block>

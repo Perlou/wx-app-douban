@@ -87,3 +87,66 @@
 .film-detail-data .data-title {
     color: #999999;
 }
+
+.film-detail-bd {
+    padding: 0 40rpx 40rpx;
+}
+
+.film-detail-bd-title {
+    padding-left: 20rpx;
+    margin-top: 40rpx;
+    margin-bottom: 20rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #444;
+    border-left: 10rpx solid #47a86c;
+}
+
+.film-detail-bd-intro {
+    text-align: justify;
+    line-height: 1.5;
+    color: #666666;
+}
+
+.film-detail-bd-tag {
+    display: flex;
+}
+
+.film-detail-bd-tag-item {
+    padding: 5rpx 10rpx;
+    margin-right: 15rpx;
+    border: 1px solid #cccccc;
+    border-radius: 10rpx;
+    color: #666666;
+}
+
+.film-detail-bd-person {
+    display: flex;
+    width: 100%;
+    height: 480rpx;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.film-detail-bd-person-item {
+    margin-left: 20rpx;
+    text-align: center;
+}
+
+.film-detail-bd-person-item:first-child {
+    margin-left: 0;
+}
+
+.film-detail-bd-person-avatar {
+    width: 280rpx;
+    height: 400rpx;
+}
+
+.film-detail-bd-person-name {
+    color: #666666;
+}
+
+.film-detail-bd-person-role {
+    font-size: 22rpx;
+    color: #999999;
+}
